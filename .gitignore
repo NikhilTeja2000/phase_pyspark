@@ -6,3 +6,7 @@ learningfiles/
 data/tpch
 
 tpch-dbgen/
+
+.vscode/
+
+__pycache__/

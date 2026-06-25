@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession, functions as F
 import pyspark.sql.types as T
 
 
-spark= (SparkSession.builder.appName("task1").config("spark.builder.memory","2g").master("local[*]").getOrCreate())
+spark= (SparkSession.builder.appName("task1").config("spark.driver.memory","2g").master("local[*]").getOrCreate())
 
 
 print(spark.version)
