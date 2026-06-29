@@ -36,5 +36,37 @@ order_schema = T.StructType([
     T.StructField("o_comment", T.StringType()),
 ])
 
+region_schema = T.StructType([
+    T.StructField("r_regionkey", T.IntegerType()),
+    T.StructField("r_name", T.StringType()),
+    T.StructField("r_comment", T.StringType()),
+])
 
+nation_schema = T.StructType([
+    T.StructField("n_nationkey", T.IntegerType()),
+    T.StructField("n_name", T.StringType()),
+    T.StructField("n_regionkey", T.IntegerType()),
+    T.StructField("n_comment", T.StringType()),
+])
 
+part_schema = T.StructType([
+    T.StructField("p_partkey", T.LongType()),
+    T.StructField("p_name", T.StringType()),
+    T.StructField("p_mfgr", T.StringType()),
+    T.StructField("p_brand", T.StringType()),
+    T.StructField("p_type", T.StringType()),
+    T.StructField("p_size", T.IntegerType()),
+    T.StructField("p_container", T.StringType()),
+    T.StructField("p_retailprice", T.DoubleType()),
+    T.StructField("p_comment", T.StringType()),
+])
+
+supplier_schema = T.StructType([
+    T.StructField("s_suppkey", T.LongType()),
+    T.StructField("s_name", T.StringType()),
+    T.StructField("s_address", T.StringType()),
+    T.StructField("s_nationkey", T.IntegerType()),
+    T.StructField("s_phone", T.StringType()),
+    T.StructField("s_acctbal", T.DoubleType()),
+    T.StructField("s_comment", T.StringType()),
+])
